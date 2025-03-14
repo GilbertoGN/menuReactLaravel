@@ -34,19 +34,14 @@ export default function MenuAppBar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-    
-    <AppBar className="header-gradient" position="static">
-  <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-    {/* Contenedor para el icono del menú y el logo */}
-    <Box sx={{ display: "flex", alignItems: "center" }}>
-     
-        <SideBar />
-   
-      <img src={logo} alt="logo" width="auto" height="40" />
-    </Box>
-
+      <AppBar className="header-gradient" position="static">
+        <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+          {/* Contenedor para el icono del menú y el logo */}
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <SideBar />
+            <img src={logo} alt="logo" width="auto" height="40" />
+          </Box>
           <Box sx={{ flexGrow: 1.5 }} />
-
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', ml: 2 }}>
             <Box className="buttons" sx={{ display: 'flex', alignItems: 'center', mr: 2 }}>
               <TopicIcon />

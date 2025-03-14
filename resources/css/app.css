@@ -40,8 +40,13 @@
         color: white !important;
     }
 
-    img {
-        width: 180px;
-        height: 90px;
-    }
+}
+
+.contenedor-inicial{
+    margin-top: -20px;
+}
+
+.logo-toolbar {
+    width: 180px;
+    height: 90px;
 }

@@ -6,7 +6,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
-import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -18,6 +17,10 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import logo_blanco from '../../assets/icons/sco_logo_blanco.svg';
+import AccountCircle from '@mui/icons-material/AccountCircle';
+import MenuItem from '@mui/material/MenuItem';
+import Menu from '@mui/material/Menu';
 
 const drawerWidth = 240;
 
@@ -83,9 +86,18 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 export default function PersistentDrawerLeft() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
   const handleDrawerOpen = () => {
     setOpen(true);
+  };
+
+  const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
   };
 
   const handleDrawerClose = () => {
@@ -95,7 +107,7 @@ export default function PersistentDrawerLeft() {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open}>
+      <AppBar className="header-gradient" position="fixed" open={open}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -111,33 +123,33 @@ export default function PersistentDrawerLeft() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Persistent drawer
-          </Typography>
-          <Typography variant="h6" noWrap component="div">
-            Persistent drawer
-          </Typography>
-          <Typography variant="h6" noWrap component="div">
-            Persistent drawer
-          </Typography>
-          <Typography variant="h6" noWrap component="div">
-            Persistent drawer
-          </Typography>
-          <Typography variant="h6" noWrap component="div">
-            Persistent drawer
-          </Typography>
-          <Typography variant="h6" noWrap component="div">
-            Persistent drawer
-          </Typography>
-          <Typography variant="h6" noWrap component="div">
-            Persistent drawer
-          </Typography>
-          <Typography variant="h6" noWrap component="div">
-            Persistent drawer
-          </Typography>
-          <Typography variant="h6" noWrap component="div">
-            Persistent drawer
-          </Typography>
+          <img className='logo-toolbar' src={logo_blanco} alt="Logo SCO" />
+
+          <Box sx={{ flexGrow: 1 }} />
+
+          <Box>
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleMenu}
+              color="inherit"
+            >
+              <AccountCircle />
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorEl}
+              anchorOrigin={{ vertical: "top", horizontal: "right" }}
+              keepMounted
+              transformOrigin={{ vertical: "top", horizontal: "right" }}
+              open={Boolean(anchorEl)}
+              onClose={handleClose}
+            >
+              <MenuItem onClick={handleClose}>Cerrar Sesion</MenuItem>
+            </Menu>
+          </Box>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -187,7 +199,7 @@ export default function PersistentDrawerLeft() {
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
-        
+
       </Main>
     </Box>
   );

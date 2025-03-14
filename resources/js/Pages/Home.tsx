@@ -1,7 +1,7 @@
 
 
 import React from 'react';
-import { Button, Typography } from '@mui/material'; // Importar componentes de MUI
+import { Button, Container, Typography } from '@mui/material'; // Importar componentes de MUI
 import Header from '../components/Header';
 import SideBar from '@/components/SideBar';
 
@@ -13,37 +13,23 @@ const Home: React.FC<HomeProps> = ({ title }) => {
         <>
             {/* <Header /> */}
             <SideBar />
-            <div style={{ padding: '20px' }}>
-                {/* Título personalizado */}
-                <Typography variant="h1" style={{ color: 'white' }}>
-                    {title}
-                </Typography >
-                <p style={{ color: 'primary' }}>
-                    ¡Bienvenido a tu app Laravel 12 con React, TypeScript e Inertia!
-                </p>
-                
-                {/* Botones con colores personalizados */}
-                <Button
-                    variant="contained"
-                    color="primary" // Usando el color primario del tema
-                    style={{ margin: '10px' }}
-                >
-                    Botón Primario
-                </Button>
-                <Button
-                    variant="contained"
-                    color="secondary" // Usando el color secundario del tema
-                    style={{ margin: '10px' }}
-                >
-                    Botón Secundario
-                </Button>
-                {/* <Button
-                    variant="contained"
-                    color="error" // Usando el color de error del tema
-                    style={{ margin: '10px' }}
-                >
-                    Botón de Error
-                </Button> */}
+            <div className='contenedor-inicial'>
+            <div className="container text-center">
+  <div className="row align-items-start">
+    <div className="col">
+      <img src="https://i.imgur.com/8Q6QX6B.png" alt="Logo"></img>
+    </div>
+    <div className="col">
+      <img src="https://i.imgur.com/8Q6QX6B.png" alt="Logo"></img>
+    </div>
+    <div className="col">
+      <img src="https://i.imgur.com/8Q6QX6B.png" alt="Logo"></img>
+    </div>
+    <div className="col">
+      <img src="https://i.imgur.com/8Q6QX6B.png" alt="Logo"></img>
+    </div>
+  </div>
+</div>
             </div>
         </>
     );
