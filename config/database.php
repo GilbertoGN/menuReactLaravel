@@ -113,7 +113,7 @@ return [
         ],
         'oracle' => [
             'driver' => 'oracle',
-            'host' => env('DB_HOST', '127.0.0.1'), // Dirección del servidor de la base de datos Oracle
+            'host' => env('DB_HOST'), // Dirección del servidor de la base de datos Oracle
             'port' => env('DB_PORT', '1521'), // Puerto de la base de datos Oracle (por defecto es 1521)
             'database' => env('DB_DATABASE'), // Nombre de la base de datos (SID)
             'service_name' => env('DB_SERVICE_NAME'), // Nombre del servicio (opcional, depende de tu configuración de Oracle)

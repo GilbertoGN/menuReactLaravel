@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Button, Typography } from '@mui/material'; // Importar componentes de MUI
-import Header from './Header';
+import Header from '../components/Header';
 
 interface HomeProps {
     title: string;
