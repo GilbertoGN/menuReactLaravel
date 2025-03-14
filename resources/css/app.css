@@ -20,5 +20,28 @@
 .header-gradient {
     background: linear-gradient(to right, #6e1e44, #cf1e4e)!important;
     /* Otras propiedades como padding, altura, etc. */
-    padding: 5px;
+    width: 100%;
+    height: 70px;
+    position: sticky;
+    top: 0;
+
+    .h6{
+        box-sizing: border-box;
+        letter-spacing: 0.05em;
+    }
+
+    .buttons:hover{
+        background-color: rgba(109, 23, 63, 0.2);
+    }
+    
+    Button{
+        font-weight: bold;
+        letter-spacing: 0.05em;
+        color: white !important;
+    }
+
+    img {
+        width: 180px;
+        height: 90px;
+    }
 }
