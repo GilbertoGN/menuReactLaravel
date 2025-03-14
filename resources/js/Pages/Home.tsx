@@ -18,16 +18,16 @@ const Home: React.FC<HomeProps> = ({ title }) => {
             <div className="contenedor-inicial">
                 <div className="container text-center" >
                     <div className="row align-items-start">
-                        <div className="col">
+                        <div className="col fade-in">
                             <img src={Img1} alt="Logo"></img>
                         </div>
-                        <div className="col">
+                        <div className="col fade-in">
                             <img src={Img2} alt="Logo"></img>
                         </div>
-                        <div className="col">
+                        <div className="col fade-in">
                             <img src={Img3} alt="Logo"></img>
                         </div>
-                        <div className="col">
+                        <div className="col fade-in">
                             <img src={Img4} alt="Logo"></img>
                         </div>
                     </div>
