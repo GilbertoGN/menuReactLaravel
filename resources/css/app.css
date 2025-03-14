@@ -44,6 +44,9 @@
 
 .contenedor-inicial{
     margin-top: -20px;
+    display: grid;
+    place-items: center;
+    height: 86vh;
 }
 
 .logo-toolbar {
