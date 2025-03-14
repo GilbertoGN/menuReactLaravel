@@ -1,7 +1,7 @@
 
 
 import React from 'react';
-import { Button, Typography } from '@mui/material'; // Importar componentes de MUI
+import { Button, Container, Typography } from '@mui/material'; // Importar componentes de MUI
 import Header from '../components/Header';
 import SideBar from '@/components/SideBar';
 
@@ -13,15 +13,10 @@ const Home: React.FC<HomeProps> = ({ title }) => {
         <>
             {/* <Header /> */}
             <SideBar />
-            <div style={{ padding: '20px' }}>
-                {/* Título personalizado */}
-                <Typography variant="h1" style={{ color: 'white' }}>
-                    {title}
-                </Typography >
+            <Container className='container'>
                 <p style={{ color: 'primary' }}>
                     ¡Bienvenido a tu app Laravel 12 con React, TypeScript e Inertia!
                 </p>
-                
                 {/* Botones con colores personalizados */}
                 <Button
                     variant="contained"
@@ -44,7 +39,7 @@ const Home: React.FC<HomeProps> = ({ title }) => {
                 >
                     Botón de Error
                 </Button> */}
-            </div>
+            </Container>
         </>
     );
 };
