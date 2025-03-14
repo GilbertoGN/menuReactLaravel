@@ -1,8 +1,6 @@
 
 
 import React from 'react';
-import { Button, Container, Typography } from '@mui/material'; // Importar componentes de MUI
-import Header from '../components/Header';
 import SideBar from '@/components/SideBar';
 
 interface HomeProps {
