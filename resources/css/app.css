@@ -54,3 +54,29 @@
     width: 180px;
     height: 90px;
 }
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 2s ease-in-out; /* Duración de 1 segundo */
+    transition: transform 0.7s ease;
+    img{
+        width: 80%;
+    }
+  }
+
+  .fade-in:hover{
+    transform: scale(1.2);
+  }
+
+  .list-item{
+    color: #6b2646 !important;
+  }
+  
