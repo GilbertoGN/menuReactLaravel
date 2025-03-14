@@ -13,7 +13,7 @@ const Home: React.FC<HomeProps> = ({ title }) => {
         <>
             {/* <Header /> */}
             <SideBar />
-            <Container className='container'>
+            <div className='contenedor-inicial'>
                 <p style={{ color: 'primary' }}>
                     ¡Bienvenido a tu app Laravel 12 con React, TypeScript e Inertia!
                 </p>
@@ -39,7 +39,7 @@ const Home: React.FC<HomeProps> = ({ title }) => {
                 >
                     Botón de Error
                 </Button> */}
-            </Container>
+            </div>
         </>
     );
 };
