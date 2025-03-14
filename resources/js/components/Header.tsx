@@ -9,6 +9,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import "../../css/app.css"
 import logo from "../../assets/img/sco_logo_blanco.png"; // Ajusta la ruta según la ubicación real
+import SideBar from './SideBar';
 
 export default function MenuAppBar() {
   const [auth, setAuth] = React.useState(true);
@@ -33,9 +34,9 @@ export default function MenuAppBar() {
   <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
     {/* Contenedor para el icono del menú y el logo */}
     <Box sx={{ display: "flex", alignItems: "center" }}>
-      <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
-        <MenuIcon />
-      </IconButton>
+     
+        <SideBar />
+   
       <img src={logo} alt="logo" width="auto" height="40" />
     </Box>
 
