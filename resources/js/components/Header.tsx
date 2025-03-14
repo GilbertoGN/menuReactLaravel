@@ -14,6 +14,7 @@ import EngineeringIcon from '@mui/icons-material/Engineering';
 import MovieIcon from '@mui/icons-material/Movie';
 import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
 import Button from '@mui/material/Button';
+import SideBar from './SideBar';
 
 export default function MenuAppBar() {
   const [auth, setAuth] = React.useState(true);
@@ -33,12 +34,16 @@ export default function MenuAppBar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar className="header-gradient" position='static' sx={{ overflowX: 'scroll'}}>
-        <Toolbar>
-            <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
-              <MenuIcon />
-            </IconButton>
-            <img src={logo} alt="logo" loading="lazy" />
+    
+    <AppBar className="header-gradient" position="static">
+  <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+    {/* Contenedor para el icono del menú y el logo */}
+    <Box sx={{ display: "flex", alignItems: "center" }}>
+     
+        <SideBar />
+   
+      <img src={logo} alt="logo" width="auto" height="40" />
+    </Box>
 
           <Box sx={{ flexGrow: 1.5 }} />
 

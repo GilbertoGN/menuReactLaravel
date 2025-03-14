@@ -3,6 +3,7 @@
 import React from 'react';
 import { Button, Typography } from '@mui/material'; // Importar componentes de MUI
 import Header from '../components/Header';
+import SideBar from '@/components/SideBar';
 
 interface HomeProps {
     title: string;
@@ -10,7 +11,8 @@ interface HomeProps {
 const Home: React.FC<HomeProps> = ({ title }) => {
     return (
         <>
-            <Header />
+            {/* <Header /> */}
+            <SideBar />
             <div style={{ padding: '20px' }}>
                 {/* Título personalizado */}
                 <Typography variant="h1" style={{ color: 'white' }}>
