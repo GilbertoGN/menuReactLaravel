@@ -21,6 +21,7 @@ import logo_blanco from '../../assets/icons/sco_logo_blanco.svg';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
+import logo_guinda from '../../assets/icons/sco_logo_grad.svg';
 
 const drawerWidth = 240;
 
@@ -92,6 +93,7 @@ export default function PersistentDrawerLeft() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
+  
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -112,7 +114,9 @@ export default function PersistentDrawerLeft() {
           >
             <MenuIcon />
           </IconButton>
-          <img className='logo-toolbar' src={logo_blanco} alt="Logo SCO" />
+          { !open && (
+            <img className='logo-toolbar' src={logo_blanco} alt="Logo SCO" />
+          )}
 
           <Box sx={{ flexGrow: 1 }} />
 
@@ -155,6 +159,7 @@ export default function PersistentDrawerLeft() {
         open={open}
       >
         <DrawerHeader>
+          <img src={logo_guinda} alt="Logo guinda" width={190} />
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>

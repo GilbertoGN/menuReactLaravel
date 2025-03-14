@@ -9,6 +9,7 @@
     src: url('/resources/assets/fonts/Montserrat-VariableFont_wght.ttf') format('opentype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 * {
