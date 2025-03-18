@@ -10,3 +10,5 @@ Route::get('/', function () {
 Route::get('/home', [HomeController::class, 'home'])->name('home');
 
 Route::get('/menu', [HomeController::class, 'menu'])->name('menu');
+
+Route::get('/about', [HomeController::class, 'about'])->name('about');
