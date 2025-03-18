@@ -1,13 +1,13 @@
+
 import React from "react";
-import Logoloader from "../../../assets/icons/sco_logo_grad.png"
-export default function About() {
+import SideBar from "./SideBar";
+import Logoloader from "../../assets/icons/sco_logo_grad.png"
+
+
+export default function Loader() {
     return (
         <>
-            <h1>Acerca de Nosotros</h1>
-            <p>
-                Esta es la página de About, cargada dinámicamente con Lazy
-                Loading.
-            </p>
+            <SideBar />
             <div id="container">
                 <img src={Logoloader} alt="Logo" className="logo-img" />
                 <span className="loading-circle sp1">
