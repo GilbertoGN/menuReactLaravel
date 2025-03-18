@@ -7,7 +7,9 @@ import Img3 from '../../../assets/img/SCO__Operaciones.png';
 import Img4 from '../../../assets/img/SCO__Produccion.png';
 import PropsController from './HomeInterfaces';
 
-const Home: React.FC<PropsController> = ({ title }) => {
+const Home: React.FC<PropsController> = ({ title, users }) => {
+  console.log(users, title);
+  
   return (
     <>
       {/* <Header /> */}
@@ -20,16 +22,16 @@ const Home: React.FC<PropsController> = ({ title }) => {
               <p className={`fs-3 fw-semibold text-light ${styles.imgText}`}>Administración</p>
             </a>
             <div className={`col ${styles.imgContainer}`}>
-              <img src={Img2} alt="Logo" className={styles.image}></img>
-              <p className={`fs-3 fw-semibold text-light ${styles.imgText}`}>Administración</p>
-            </div>
-            <div className={`col ${styles.imgContainer}`}>
               <img src={Img3} alt="Logo" className={styles.image}></img>
               <p className={`fs-3 fw-semibold text-light ${styles.imgText}`}>Operaciones</p>
             </div>
             <div className={`col ${styles.imgContainer}`}>
               <img src={Img4} alt="Logo" className={styles.image}></img>
               <p className={`fs-3 fw-semibold text-light ${styles.imgText}`}>Producción</p>
+            </div>
+            <div className={`col ${styles.imgContainer}`}>
+              <img src={Img2} alt="Logo" className={styles.image}></img>
+              <p className={`fs-3 fw-semibold text-light ${styles.imgText}`}>Comunicación</p>
             </div>
           </div>
         </div>

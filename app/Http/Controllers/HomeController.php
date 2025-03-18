@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Inertia\Inertia;
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -12,8 +13,10 @@ class HomeController extends Controller
      */
     public function home()
     {
+        $usuarios = User::all();
         return Inertia::render("Home/Home", [
-            'title' => 'Hello, world!'
+            'title' => 'Hello, world!',
+            'users' => $usuarios
         ]);
     }
 
