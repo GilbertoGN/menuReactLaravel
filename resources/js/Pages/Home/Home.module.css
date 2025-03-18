@@ -39,3 +39,9 @@
     max-width: 33%;
   }
 } 
+
+@media (max-width: 420px){
+    .imgContainer {
+        min-width: 75vw;
+    }
+}
