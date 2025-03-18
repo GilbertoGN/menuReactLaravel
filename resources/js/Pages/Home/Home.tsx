@@ -16,7 +16,7 @@ const Home: React.FC<HomeProps> = ({ title }) => {
       <SideBar />
       <div className="contenedor-inicial">
         <div className="container text-center">
-          <div className={`row align-items-start ${styles.menuContainer}`}>
+          <div className={`row align-items-start justify-content-center`}>
             <div className={`col ${styles.imgContainer}`}>
               <img src={Img1} alt="Logo" className={styles.image}></img>
               <p className={`fs-3 fw-semibold text-light ${styles.imgText}`}>Administración</p>
@@ -27,11 +27,11 @@ const Home: React.FC<HomeProps> = ({ title }) => {
             </div>
             <div className={`col ${styles.imgContainer}`}>
               <img src={Img3} alt="Logo" className={styles.image}></img>
-              <p className={`fs-3 fw-semibold text-light ${styles.imgText}`}>Administración</p>
+              <p className={`fs-3 fw-semibold text-light ${styles.imgText}`}>Operaciones</p>
             </div>
             <div className={`col ${styles.imgContainer}`}>
               <img src={Img4} alt="Logo" className={styles.image}></img>
-              <p className={`fs-3 fw-semibold text-light ${styles.imgText}`}>Administración</p>
+              <p className={`fs-3 fw-semibold text-light ${styles.imgText}`}>Producción</p>
             </div>
           </div>
         </div>
