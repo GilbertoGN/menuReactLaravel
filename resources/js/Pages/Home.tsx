@@ -18,15 +18,15 @@ const Home: React.FC<HomeProps> = ({ title }) => {
                     <div className="row justify-content-between">
                         <div className="col-3 fade-in">
                             <img src={Img1} alt="Logo"></img>
-                            <p className="text-3xl text-center">Comunicación</p>
+                            <p className="text-3xl text-center">Administración</p>
                         </div>
                         <div className="col-3 fade-in">
                             <img src={Img3} alt="Logo"></img>
-                            <p className="text-3xl text-center">Comunicación</p>
+                            <p className="text-3xl text-center">Operaciones</p>
                         </div>
                         <div className="col-3 fade-in">
                             <img src={Img2} alt="Logo"></img>
-                            <p className="text-3xl text-center">Comunicación</p>
+                            <p className="text-3xl text-center">Produción</p>
                         </div>
                         <div className="col-3 fade-in">
                             <img src={Img4} alt="Logo"></img>
