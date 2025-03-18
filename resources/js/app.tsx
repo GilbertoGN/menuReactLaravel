@@ -7,6 +7,7 @@ import { createRoot } from 'react-dom/client';
 import { ThemeProvider } from '@mui/material/styles'; // Importamos ThemeProvider de MUI
 import theme from './theme'; // Importamos el tema personalizado
 import { ComponentType, lazy, Suspense } from 'react';
+import Loader from './components/Loader';
 
 const appName = import.meta.env.VITE_APP_NAME;
 console.log(import.meta.glob('./Pages/**/*.tsx'));
@@ -28,7 +29,7 @@ createInertiaApp({
         const root = createRoot(el);
         // Envolvemos la aplicación con el ThemeProvider para aplicar el tema
         root.render(
-            <Suspense fallback={<div>Cargando...</div>}>
+            <Suspense fallback={<Loader></Loader>}>
                 <ThemeProvider theme={theme}>
                     <App {...props} />
                 </ThemeProvider>
