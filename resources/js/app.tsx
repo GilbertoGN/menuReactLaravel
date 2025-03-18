@@ -8,6 +8,7 @@ import { ThemeProvider } from '@mui/material/styles'; // Importamos ThemeProvide
 import theme from './theme'; // Importamos el tema personalizado
 
 const appName = import.meta.env.VITE_APP_NAME;
+console.log(import.meta.glob('./Pages/**/*.tsx'));
 
 createInertiaApp({
     title: () => `${appName}`,
@@ -18,7 +19,6 @@ createInertiaApp({
         ),
     setup({ el, App, props }) {
         const root = createRoot(el);
-
         // Envolvemos la aplicación con el ThemeProvider para aplicar el tema
         root.render(
             <ThemeProvider theme={theme}> 

@@ -5,11 +5,9 @@ import Img1 from '../../../assets/img/SCO__Administracion.png';
 import Img2 from '../../../assets/img/SCO__Comunicacion.png';
 import Img3 from '../../../assets/img/SCO__Operaciones.png';
 import Img4 from '../../../assets/img/SCO__Produccion.png';
+import PropsController from './HomeInterfaces';
 
-interface HomeProps {
-  title: string;
-}
-const Home: React.FC<HomeProps> = ({ title }) => {
+const Home: React.FC<PropsController> = ({ title }) => {
   return (
     <>
       {/* <Header /> */}
@@ -17,10 +15,10 @@ const Home: React.FC<HomeProps> = ({ title }) => {
       <div className="contenedor-inicial">
         <div className="container text-center">
           <div className={`row align-items-start justify-content-center`}>
-            <div className={`col ${styles.imgContainer}`}>
+            <a href="/menu" className={`col ${styles.imgContainer}`} >
               <img src={Img1} alt="Logo" className={styles.image}></img>
               <p className={`fs-3 fw-semibold text-light ${styles.imgText}`}>Administración</p>
-            </div>
+            </a>
             <div className={`col ${styles.imgContainer}`}>
               <img src={Img2} alt="Logo" className={styles.image}></img>
               <p className={`fs-3 fw-semibold text-light ${styles.imgText}`}>Administración</p>
