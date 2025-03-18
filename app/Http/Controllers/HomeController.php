@@ -24,6 +24,13 @@ class HomeController extends Controller
         ]);
     }
 
+    public function about()
+    {
+        return Inertia::render("About/About", [
+            'title' => 'Hello, world!'
+        ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      */

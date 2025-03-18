@@ -12,7 +12,7 @@ const appName = import.meta.env.VITE_APP_NAME;
 console.log(import.meta.glob('./Pages/**/*.tsx'));
 
 createInertiaApp({
-    title: (title) => `${title} - ${appName}`,
+    title: (title) => `${appName}`,
 
     resolve: async (name) => {
         const pages = import.meta.glob('./Pages/**/*.tsx');
